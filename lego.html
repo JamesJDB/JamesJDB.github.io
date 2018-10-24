@@ -12,12 +12,63 @@
     h1 {font-family : "Gabriola"; 
     font-size:3em;}  
     
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+    
     
     
 </style>
 
     <h1><u><em>LEGO</em></u></h1>
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="logo of lego" width="200">
+    
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="https://jamesjdb.github.io/knoppen.html">Button</a>
+  <a href="https://jamesjdb.github.io/images.html">Images</a>
+  
+</div>
+
+<p>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span></p>
+
+
     
     <h2>About the Lego group</h2>
     <p>The LEGO Group is a privately held, family-owned company with headquarters in Billund, Denmark, and main offices in Enfield, USA, London, UK, Shanghai, China, and Singapore. <br>Founded in 1932 by Ole Kirk Kristiansen, and based on the iconic LEGO® brick, it is <strong>one of the world's leading manufacturers of play materials</strong>.</p>
@@ -42,5 +93,14 @@
     
    
 <p>sources:<a href="https://www.lego.com/en-us">Offical Lego Site</a>,<a href="https://www.legoland.com/">Legoland Site</a></p>
+    <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </body>
 </html>
